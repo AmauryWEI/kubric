@@ -65,7 +65,7 @@ class ArgumentParser(argparse_flags.ArgumentParser):
     self.add_argument("--scratch_dir", type=str, default=tempfile.mkdtemp(),
                       help="local directory for storing intermediate files such as "
                            "downloaded assets, raw output of renderer, ... (default: temp dir)")
-    self.add_argument("--job-dir", type=str, default="output",
+    self.add_argument("--job_dir", type=str, default="output",
                       help="target directory for storing the worker output (default: ./output)")
 
   def parse_args(self, args=None, namespace=None):

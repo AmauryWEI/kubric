@@ -64,7 +64,7 @@ then
     --region $REGION \
     --scale-tier basic \
     --master-image-uri $TAG \
-    --job-dir "gs://research-brain-kubric-xgcp/jobs/$JOB_NAME" \
+    --job_dir "gs://research-brain-kubric-xgcp/jobs/$JOB_NAME" \
     -- "$@"
 
   # --- Streams the job logs to local terminal
@@ -80,7 +80,7 @@ else   # hyper
     --scale-tier basic \
     --master-image-uri $TAG \
     --config /tmp/hypertune.yml \
-    --job-dir "gs://research-brain-kubric-xgcp/jobs/$JOB_NAME" \
+    --job_dir "gs://research-brain-kubric-xgcp/jobs/$JOB_NAME" \
     -- "$@"
   gcloud ai-platform jobs describe $JOB_NAME
 fi
