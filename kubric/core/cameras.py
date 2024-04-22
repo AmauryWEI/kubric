@@ -140,7 +140,7 @@ class PerspectiveCamera(Camera):
 
   @property
   def intrinsics(self):
-    width, height = 1., 1.  # self.active_scene.resolution
+    width, height = self.active_scene.resolution
     f_x = self.focal_length / self.sensor_width * width
     f_y = self.focal_length / self.sensor_height * height
     p_x = width / 2.
