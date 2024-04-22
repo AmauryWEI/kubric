@@ -70,8 +70,8 @@ class PyBullet(core.View):
                                  useSplitImpulse=True,
                                  contactSlop=0.,
                                  enableConeFriction=False,
-                                 deterministicOverlappingPairs=True)
-    # TODO: setTimeStep if scene.step_rate != 240 Hz
+                                 deterministicOverlappingPairs=True,
+                                 fixedTimeStep=1.0/scene.step_rate)
     super().__init__(
         scene,
         scene_observers={
